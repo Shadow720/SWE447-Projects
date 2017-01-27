@@ -2,4 +2,4 @@
 #Commons
 
 
-This Directory contains file that will inculde in each WebGL applications. 
+This Directory contains files that will include in each WebGL applications. 
