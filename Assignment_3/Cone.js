@@ -3,8 +3,6 @@ var cone = null;
 function init() {
     var cone = document.getElementById( "Cone-vertex-shader" );
     
-   
-
     Cone = WebGLUtils.setupWebGL( cone );
 
     if ( !Cone ) {
