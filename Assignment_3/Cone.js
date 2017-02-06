@@ -1,6 +1,6 @@
 var gl = null;
 
-function init() {
+function init(Cone-vertex-shader) {
     var canvas = document.getElementById( "webgl-canvas" );
 
     gl = WebGLUtils.setupWebGL( canvas );
@@ -12,10 +12,10 @@ function init() {
 
     gl.clearColor( 1.0, 1.0, 0.0, 1.0 );
 
-    render();
+    render(Cone-vertex-shader);
 }
 
-function render() {
+function render(Cone-vertex-shader) {
     gl.clear( gl.COLOR_BUFFER_BIT );
 }
 
