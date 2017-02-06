@@ -1,4 +1,4 @@
-var gl = null;
+var cone = null;
 
 function init() {
     var canvas = document.getElementById( "Cone-vertex-shader" );
