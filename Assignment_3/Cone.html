@@ -2,10 +2,15 @@
 <html>
 <head>
   <script src="../Common/initShaders.js"></script>
+ 
   <script src="../Common/Cone.js"></script>
+  
   <script src="cone.js"></script> 
-  <script id="Cone-vertex-shader"
-          type="x-shader/x-vartex">
+ 
+  <!-- Adding Vertex Shader here Below-->
+  
+  <script id="Cone-vertex-shader"type="x-shader/x-vartex">
+          
           attribute vec4 vPosition;
           varying   vec4 fcolors;
           
@@ -15,10 +20,25 @@
             gl_Position = vPosition;
           }
   </script> 
+  
+  <!-- Adding Fragment Shader here Below-->
+  
+  <script id="Cone-fragment-shader"type="x-shader/x-fragment">
+          
+          precision highp float;
+          varying   vec4 fcolors;
+          
+          void main()
+          {
+            gl_FragColor = vec4{1.0, 0.0, 0.0, 1.0};
+            gl_gl_FragColor = fcolor;
+          }
+  </script> 
 
- </head>
+</head>
   
 <body>
-  <canvas id="webgl-canvas" width="512" height="512" style="background-color: #FFFF00"></canvas
+  <canvas id="webgl-canvas" width="512" height="512" style="background-color: #FFFF00"></canvas>
+  
 </body>
 </html>
