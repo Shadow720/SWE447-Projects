@@ -4,9 +4,9 @@ function init() {
     var canvas = document.getElementById( "Cone-vertex-shader" );
     cone = new Cone( n ); 
 
-    gl = WebGLUtils.setupWebGL( canvas );
+    Cone = WebGLUtils.setupWebGL( Cone );
 
-    if ( !gl ) {
+    if ( !Cone ) {
         alert("Unable to setup WebGL");
         return;
     }
