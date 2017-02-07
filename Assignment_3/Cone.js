@@ -17,7 +17,7 @@ function init()
     render();
 };
 
-function square () 
+function cone () 
 {    
    this.count = 4;
    this.positions = 
@@ -47,7 +47,7 @@ function square ()
 };
 
 
-var square = 
+var cone = 
     { 
         count : 4, 
         positions : {
