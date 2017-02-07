@@ -1,6 +1,6 @@
 
 function init() {
-    var cone = document.getElementById( "Cone-vertex-shader" );
+    var canvas = document.getElementById( "webgl-canvas" );
     
     Cone = WebGLUtils.setupWebGL( cone );
 
