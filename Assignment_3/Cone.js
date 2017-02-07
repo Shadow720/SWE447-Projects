@@ -2,17 +2,17 @@ var cone = null;
 
 function init() 
 {
-    var cone = document.getElementById( "webgl-canvas" );
+    var canvas = document.getElementById( "webgl-canvas" );
     cone = new cone( n );
     
-    cone = WebGLUtils.setupWebGL( canvas );
+    gl = WebGLUtils.setupWebGL( canvas );
 
-    if ( !cone ) {
+    if ( !gl ) {
         alert("Unable to setup WebGL");
         return;
     }
 
-    cone.clearColor( 1.0, 0.0, 0.0, 1.0 );
+    gl.clearColor( 1.0, 0.0, 0.0, 1.0 );
 
     render();
 };
@@ -47,7 +47,7 @@ function cone ()
 };
 
 
-var cone = 
+var square = 
     { 
         count : 4, 
         positions : {
