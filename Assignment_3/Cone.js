@@ -17,7 +17,7 @@ function init()
     render();
 };
 
-function cone () 
+function square () 
 {    
    this.count = 4;
    this.positions = 
