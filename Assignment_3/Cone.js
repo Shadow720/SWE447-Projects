@@ -2,17 +2,17 @@ var cone = null;
 
 function init() 
 {
-    var canvas = document.getElementById( "webgl-canvas" );
+    var cone = document.getElementById( "webgl-canvas" );
     cone = new cone( n );
     
-    gl = WebGLUtils.setupWebGL( canvas );
+    cone = WebGLUtils.setupWebGL( canvas );
 
-    if ( !gl ) {
+    if ( !cone ) {
         alert("Unable to setup WebGL");
         return;
     }
 
-    gl.clearColor( 1.0, 0.0, 0.0, 1.0 );
+    cone.clearColor( 1.0, 0.0, 0.0, 1.0 );
 
     render();
 };
