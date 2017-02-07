@@ -16,8 +16,7 @@ function init() {
     render();
 };
 
-function square () 
-{    
+function square () {    
    this.count = 4;
    this.positions = 
        {
@@ -46,8 +45,7 @@ function square ()
 };
 
 
-var square = 
-    { 
+var square = { 
         count : 4, 
         positions : {
             values : new Float32Array
@@ -68,8 +66,7 @@ var square =
         }
 };
                                     
-function render() 
-{
+function render() {
  cone.render();
 };
                            
