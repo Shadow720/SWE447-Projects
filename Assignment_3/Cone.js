@@ -1,10 +1,9 @@
 var cone = null;
 
-cone = new Cone( n );
-
 function init() 
 {
     var canvas = document.getElementById( "webgl-canvas" );
+    cone = new Cone( n );
     
     gl = WebGLUtils.setupWebGL( canvas );
 
