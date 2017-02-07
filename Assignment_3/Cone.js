@@ -16,7 +16,7 @@ function init() {
 }
 
 function render() {
-    gl.render();
+    gl.clear( gl.COLOR_BUFFER_BIT );
 }
 
 window.onload = init;
