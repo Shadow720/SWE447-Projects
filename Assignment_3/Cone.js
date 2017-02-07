@@ -1,7 +1,6 @@
 var cone = null;
 
-function init() 
-{
+function init() {
     var canvas = document.getElementById( "webgl-canvas" );
     cone = new cone( n );
     
