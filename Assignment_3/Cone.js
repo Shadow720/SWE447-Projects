@@ -54,13 +54,7 @@ function square ()
     gl.enableVertexAttribArray(this.positions.attributeLoc); 
 };
 
-function render() 
-{
-    gl.clear( gl.COLOR_BUFFER_BIT );
-    
-   this.count = 4;
- 
-};
+
 
 var square = 
     { 
