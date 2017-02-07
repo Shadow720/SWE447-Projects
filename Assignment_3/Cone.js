@@ -37,6 +37,14 @@ function square ()
          values : new Float32Array([ ... ]),       
          numComponets : 3 
                   }; 
+                                    
+    this.render = function () 
+    {        
+    var start = 0;     
+    var count = this.count; 
+    gl.drawArrays(gl.TRIANGLE_STRIP, tart, count);    
+    };                                
+                                    
 };
 
 {
