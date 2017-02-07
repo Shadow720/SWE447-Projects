@@ -41,7 +41,7 @@ function square ()
     {        
     var start = 0;     
     var count = this.count; 
-    gl.drawArrays(gl.TRIANGLE_STRIP, tart, count);    
+    gl.drawArrays(gl.TRIANGLE_STRIP, start, count);    
     };                                
                                     
 };
@@ -59,15 +59,7 @@ function render()
     gl.clear( gl.COLOR_BUFFER_BIT );
     
    this.count = 4;
-    
-   this.render = function () 
-   {
-      ... // bind buffers
-      var start = 0;       
-      var count = this.count;       
-      gl.drawArrays(gl.TRIANGLE_STRIP,           
-      start, count);    
-   }; 
+ 
 };
 
 var square = 
