@@ -16,7 +16,7 @@ function init() {
 }
 
 function render() {
-    cone.render();
+    gl.render();
 }
 
 window.onload = init;
