@@ -4,7 +4,7 @@ function init() {
     
     gl = WebGLUtils.setupWebGL( canvas );
 
-    if ( !Cone ) {
+    if ( !gl ) {
         alert("Unable to setup WebGL");
         return;
     }
