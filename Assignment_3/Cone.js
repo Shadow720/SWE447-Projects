@@ -16,7 +16,7 @@ function init()
     gl.clearColor( 1.0, 0.0, 0.0, 1.0 );
 
     cone.render();
-}
+};
 
 function render() 
 {
@@ -32,7 +32,7 @@ function render()
       gl.drawArrays(gl.TRIANGLE_STRIP,           
       start, count);    
    }; 
-}
+};
 
 var Square = 
     { 
