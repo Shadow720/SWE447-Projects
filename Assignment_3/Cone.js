@@ -54,8 +54,6 @@ function square ()
     gl.enableVertexAttribArray(this.positions.attributeLoc); 
 };
 
-
-
 var square = 
     { 
         count : 4, 
@@ -76,6 +74,11 @@ var square =
          values : new Float32Array([ ... ]), 
          numComponets : 3 
         }
+};
+                                    
+function render() 
+{
+ cone.render();
 };
                            
 window.onload = init;
