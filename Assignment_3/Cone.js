@@ -79,8 +79,8 @@ var square =
             ([  
                 0.0, 0.0,  // Vertex 0  
                 1.0, 0.0,  // Vertex 1  
-                1.0, 1.0,  // Vertex 2  
-                0.0, 1.0   // Vertex 3  
+                0.0, 1.0,  // Vertex 3  
+                1.0, 1.0   // Vertex 2  
             ]), 
                 
             numComponents : 2 
