@@ -1,3 +1,4 @@
+var gl = null;
 
 function init() {
     var canvas = document.getElementById( "webgl-canvas" );
