@@ -2,7 +2,8 @@ var cone = null;
 
 cone = new Cone( n );
 
-function init() {
+function init() 
+{
     var canvas = document.getElementById( "webgl-canvas" );
     
     gl = WebGLUtils.setupWebGL( canvas );
@@ -23,9 +24,14 @@ function render()
     
    this.count = 4;
     
-   this.render = function () {
+   this.render = function () 
+   {
       ... // bind buffers
-      var start = 0;       var count = this.count;       gl.drawArrays(gl.TRIANGLE_STRIP,           start, count);    }; 
+      var start = 0;       
+      var count = this.count;       
+      gl.drawArrays(gl.TRIANGLE_STRIP,           
+      start, count);    
+   }; 
 }
 
 var Square = 
