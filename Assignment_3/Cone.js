@@ -20,8 +20,7 @@ function init()
 
 function Square () 
 {
-  ...
-  this.positions.buffer = gl.createBuffer();   
+    this.positions.buffer = gl.createBuffer();   
     gl.bindBuffer(gl.ARRAY_BUFFER, this.positions.buffer);   
     gl.bufferData(gl.ARRAY_BUFFER, this.positions.values, gl.STATIC_DRAW);   
     this.positions.attributeLoc = gl.getAttribLocation(this.program, “vPosition”);   
