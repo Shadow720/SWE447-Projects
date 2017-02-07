@@ -9,7 +9,7 @@ function init() {
         return;
     }
 
-    cone.clearColor( 1.0, 0.0, 0.0, 1.0 );
+    gl.clearColor( 1.0, 0.0, 0.0, 1.0 );
 
     render();
 }
