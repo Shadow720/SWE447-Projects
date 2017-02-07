@@ -46,13 +46,6 @@ function square ()
                                     
 };
 
-{
-    this.positions.buffer = gl.createBuffer();   
-    gl.bindBuffer(gl.ARRAY_BUFFER, this.positions.buffer);   
-    gl.bufferData(gl.ARRAY_BUFFER, this.positions.values, gl.STATIC_DRAW);   
-    this.positions.attributeLoc = gl.getAttribLocation(this.program, “vPosition”);   
-    gl.enableVertexAttribArray(this.positions.attributeLoc); 
-};
 
 var square = 
     { 
