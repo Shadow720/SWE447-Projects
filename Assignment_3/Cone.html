@@ -6,6 +6,8 @@
  
   <script src="../Common/Cone.js"></script>
   
+  <script src="../Common/webgl-utils.js"></script>
+  
   <script src="Cone.js"></script> 
  
   <!-- Adding Vertex Shader here Below-->
@@ -14,10 +16,10 @@
           type="x-shader/x-vartex">
           
           attribute vec4 vPosition;
-          varying   vec4 fcolors;
           
           void main()
           {
+            gl_PointSize = 5.0;
             gl_Position = vPosition;
           }
   </script> 
@@ -28,12 +30,10 @@
           type="x-shader/x-fragment">
           
           precision highp float;
-          varying   vec4 fcolors;
           
           void main()
           {
-            gl_FragColor = vec4{1.0, 0.0, 0.0, 1.0};
-            
+            gl_FragColor = vec4{1.0, 0.0, 1.0, 1.0};          
           }
   </script> 
 
