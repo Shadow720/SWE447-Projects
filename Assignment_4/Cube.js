@@ -1,117 +1,48 @@
 function Cube(gl, vertexShaderId, fragmentShaderId )
+
+{var initGLSurface = function(gl, canvas)
+
 {
-    this.program = initShaders(gl, vertexShaderId, fragmentShaderId);
+  // set the clearing color here.
+  gl.clearColor(0.9, 0.9, 0.9, 1.0);
+  gl.enable(gl.DEPTH_TEST);
+  gl.depthFunc(gl.LEQUAL);
+  // Clear the color as well as the depth buffer.
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  // set viewport
+  gl.viewport(window.width/2, window.height/2, canvas.width, canvas.height);
+}
 
-    if (!gl.isProgram(this.program) ) {
-        alert( "Error: Cube shader pipeline failed to compile.\n\n" +
-            "\tvertex shader id:  \t" + vertexShaderId + "\n" +
-            "\tfragment shader id:\t" + fragmentShaderId + "\n" );
-        return;
-    }
+var init = function()
+{
+  var canvas = document.getElementById('gl-canvas');
+    
+  var gl = canvas.getContext('webgl');
 
-    this.positions =
-    {
-      numComponents : 3,
-      values :[
-        -0.5, -0.5, 0.5,  // 0
-        0.5, -0.5, 0.5,   // 1
-        -0.5, 0.5, 0.5,   // 2
-        0.5, 0.5, 0.5,    // 3
-        -0.5, 0.5, -0.5,  // 4
-        0.5, 0.5, -0.5,   // 5
-        -0.5, -0.5, -0.5, // 6
-        0.5, -0.5, -0.5]  // 7
-     };
+  if(!gl){
+    alert('WebGL not supprted falling back on experimental');
+    gl = canvas.getContext('experimental-webgl');
+  }
 
-   this.indices =
-   {
-     numComponents : 3,
-     values : [
-       0, 1, 2,
-       2, 1, 3,
-       4, 7, 6,
-       4, 5, 7,
-       4, 6, 0,
-       4, 0, 2,
-       3, 1, 7,
-       3, 7, 5,
-       4, 2, 3,
-       4, 3, 5,
-       1, 0, 6,
-       1, 6, 7
-     ]
-   };
+  if(!gl){
+    alert('WebGL not supprted in your browser');
+    return;
+  }
 
+  initGLSurface(gl, canvas);
 
-    this.positions.buffer = gl.createBuffer();
-    gl.bindBuffer( gl.ARRAY_BUFFER, this.positions.buffer );
-    gl.bufferData( gl.ARRAY_BUFFER, new Float32Array(this.positions.values), gl.DYNAMIC_DRAW );
+  try
+  {
+    var cube = new Cube(gl, "vertex-shader", "frag-shader");
 
-    this.indices.buffer = gl.createBuffer();
-    gl.bindBuffer( gl.ELEMENT_ARRAY_BUFFER, this.indices.buffer );
-    gl.bufferData( gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(this.indices.values), gl.STATIC_DRAW );
+    // Not fully working properly but at least lets you see 3D nature of model
+    cube.rotateYPoints(0.2);
+    cube.rotateXPoints(0.2);
+    cube.render();
+  }
+  catch(e)
+  {
+    alert("catch" + " " + e.message);
+  }
 
-    this.positions.attributeLoc = gl.getAttribLocation( this.program, "vPosition" );
-    gl.enableVertexAttribArray( this.positions.attributeLoc );
-
-    this.render = function ()
-    {
-        gl.useProgram( this.program );
-
-        gl.bindBuffer( gl.ARRAY_BUFFER, this.positions.buffer );
-        gl.bufferData( gl.ARRAY_BUFFER, new Float32Array(this.positions.values), gl.DYNAMIC_DRAW );
-        gl.vertexAttribPointer( this.positions.attributeLoc, this.positions.numComponents,
-            gl.FLOAT, gl.FALSE, 0, 0 );
-
-
-        gl.bindBuffer( gl.ELEMENT_ARRAY_BUFFER, this.indices.buffer );
-        gl.drawElements( gl.LINE_LOOP, this.indices.values.length, gl.UNSIGNED_SHORT, 0 );
-    }
-
-   this.rotateYPoint = function(x, y, z, r)
-   {
-     z = z*Math.cos(r) - x*Math.sin(r)
-     x = z*Math.sin(r) + x*Math.cos(r)
-     y = y
-
-     return [x, y, z];
-   };
-
-   this.rotateYPoints = function(r)
-   {
-     for(var i = 0; i < this.positions.values.length; i += 3){
-       x = this.positions.values[i];
-       y = this.positions.values[i+1];
-       z = this.positions.values[i+2];
-
-       xyz = this.rotateYPoint(x, y, z, r);
-       this.positions.values[i] = xyz[0];
-       this.positions.values[i+1] = xyz[1];
-       this.positions.values[i+2] = xyz[2];
-     }
-   };
-
-   this.rotateXPoint = function(x, y, z, r)
-   {
-     y = y*Math.cos(r) - z*Math.sin(r)
-     z = y*Math.sin(r) + z*Math.cos(r)
-     x = x
-
-     return [x, y, z];
-   };
-
-   this.rotateXPoints = function(r)
-   {
-     for(var i = 0; i < this.positions.values.length; i += 3){
-       x = this.positions.values[i];
-       y = this.positions.values[i+1];
-       z = this.positions.values[i+2];
-
-       xyz = this.rotateXPoint(x, y, z, r);
-       this.positions.values[i] = xyz[0];
-       this.positions.values[i+1] = xyz[1];
-       this.positions.values[i+2] = xyz[2];
-     }
-   };
-
-};
+}
