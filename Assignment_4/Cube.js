@@ -35,7 +35,6 @@ var init = function()
   {
     var cube = new Cube(gl, "vertex-shader", "frag-shader");
 
-    // Not fully working properly but at least lets you see 3D nature of model
     cube.rotateYPoints(0.2);
     cube.rotateXPoints(0.2);
     cube.render();
