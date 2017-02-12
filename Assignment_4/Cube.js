@@ -1,6 +1,4 @@
-function Cube(gl, vertexShaderId, fragmentShaderId )
-
-{var initGLSurface = function(gl, canvas)
+var initGLSurface = function(gl, canvas)
 
 {
   // set the clearing color here.
