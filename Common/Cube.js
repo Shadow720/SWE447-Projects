@@ -3,7 +3,7 @@ function Cube(gl, vertexShaderId, fragmentShaderId )
     this.program = initShaders(gl, vertexShaderId, fragmentShaderId);
 
     if (!gl.isProgram(this.program) ) {
-        alert( "Error: Cone shader pipeline failed to compile.\n\n" +
+        alert( "Error: Cube shader pipeline failed to compile.\n\n" +
             "\tvertex shader id:  \t" + vertexShaderId + "\n" +
             "\tfragment shader id:\t" + fragmentShaderId + "\n" );
         return;
