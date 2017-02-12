@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <script src="../Common/initShaders.js"></script>
+  
+  <script src="../Common/Cube.js"></script>
+  
+  <script src="cube.js"></script>
+</head>
+
+<body onload="init();">
+
+  <canvas id="gl-canvas" width="800" height="800"
+          style="border:3px dashed #00ffff;">
+  </canvas>
+
+  <script type="x-shader/x-vertex" id="vertex-shader">
+    attribute vec4 vPosition;
+    void main()
+    {
+      gl_Position = vPosition;
+      gl_PointSize = 10.0;
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="frag-shader">
+    precision mediump float;
+    void main()
+    {
+        gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    }
+  </script>
+
+</body>
