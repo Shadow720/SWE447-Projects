@@ -31,7 +31,7 @@ var init = function()
 
   try
   {
-    var cube = new Cube(gl, "vertex-shader", "frag-shader");
+    var cube = new Cube(gl, "vertex-shader", "fragment-shader");
 
     cube.rotateYPoints(0.2);
     cube.rotateXPoints(0.2);
