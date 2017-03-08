@@ -11,32 +11,35 @@
   <script src="Solar.js"></script>
 
   <script type="x-shader/x-vertex" id="Sphere-vertex-shader">
-  attribute vec4  vPosition;
-  uniform mat4 rotationMatrix;
+    attribute vec4  vPosition;
+    uniform mat4 rotationMatrix;
 
-  uniform mat4  MV;
-  uniform mat4  P;
+    uniform mat4  MV;
+    uniform mat4  P;
 
-  void main()
-  {
-    gl_Position = P * MV * vPosition;
-    gl_PointSize = 2.0;
-  }
+    void main()
+    {
+      gl_Position = P * MV * vPosition;
+      gl_PointSize = 2.0;
+    }
   </script>
 
   <script type="x-shader/x-fragment" id="Sphere-fragment-shader">
-  precision highp float;
+    precision highp float;
 
-  uniform vec4  color;
+    uniform vec4  color;
 
-  void main()
-  {
-    gl_FragColor = color;
-  }
+    void main()
+    {
+      gl_FragColor = color;
+    }
   </script>
 </head>
 
 <body>
   <canvas id="webgl-canvas" width="800" height="800"></canvas>
+  
+  <input type="range" value="90" min="50" max="180" id="fovySlider" oninput="resize()">
+  
 </body>
 </html>
