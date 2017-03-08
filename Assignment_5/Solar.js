@@ -114,7 +114,7 @@ function render()
   // Specify the viewing transformation, and use it to initialize the 
   // matrix stack
 
-  V = translate(0.0, 0.0, -0.5*(near + far));
+  V = translate(0.0, 0.0, -0.9*(near + far));
   ms.load(V);  
 
   // Create a few temporary variables to make it simpler to work with
