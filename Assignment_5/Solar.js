@@ -102,7 +102,8 @@ function init() {
 //  render() - render the scene
 //
 
-function render() {
+function render()
+{
   time += timeDelta;
   angle += timeDelta;
 
@@ -183,6 +184,7 @@ function render() {
   //Pluto
   renderPlanet("Pluto", distanceScale, 1, ms);
 }
+  
 catch(e)
 {
   if(catchSwitch){
