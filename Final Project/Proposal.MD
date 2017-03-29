@@ -17,4 +17,4 @@ week 3: Get the solvers working
 
 Week 4: Get the Matrix correct
 
-Week 5: Finalize and get through any obstacles
+Week 5: Finalize and stretch goal: user FULL control of the scene
