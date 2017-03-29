@@ -7,6 +7,7 @@ Idea:
 
 Some kind of colorful or perhaphs just single color 2D Fluid Simulator.  
 
+
 Week 1: Research or Brain Storm 
 
 Week 2: Get the color to display
