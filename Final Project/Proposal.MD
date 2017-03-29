@@ -3,10 +3,11 @@ GUI Graphics Programming
 
 FINAL PROJECT PROPOSAL 
 
-Idea:
+PLANNED IDEA:
 
 Some kind of colorful or perhaphs just single color 2D Fluid Simulator.  
 
+PROGRESSION (Hopefully): 
 
 Week 1: Research or Brain Storm 
 
