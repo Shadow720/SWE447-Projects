@@ -19,4 +19,4 @@ Week 4: Get the Matrix correct
 
 Week 5: Finalize and stretch goal: user FULL control of the scene
 
-Implementation:  Using only Three Java Scipt if possible
+Implementation:  Using only Three Java Scipt if possible.  I might use the help of a 3rd party Java Scipt to assit the project to work.   
