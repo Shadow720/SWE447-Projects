@@ -30,14 +30,14 @@ body
       margin: 25px auto 0;
     }
     
-      button#b0_start_stop,
+      button#b0_START_STOP,
       button#b2_color
       {
         float: left;
       }
       
-      button#b1_reset,
-      button#b3_fps
+      button#b1_RESET,
+      button#b3_FPS
       {
         float: right;
       }
