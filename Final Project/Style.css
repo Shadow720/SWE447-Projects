@@ -17,7 +17,7 @@ body
     margin: 50px auto;
   }
   
-    canvas#my_canvas
+    canvas#gl_canvas
     {
       border-radius: 4px;
     }
