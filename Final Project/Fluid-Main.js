@@ -11,13 +11,11 @@
 
 (function( window, undefined ) {
 
-// Use the correct document accordingly with window argument (sandbox)
 var document = window.document,
 	navigator = window.navigator,
 	location = window.location;
 var jQuery = (function() {
 
-// Define a local copy of jQuery
 var jQuery = function( selector, context ) {
 		
 		return new jQuery.fn.init( selector, context, rootjQuery );
