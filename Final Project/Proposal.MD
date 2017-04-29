@@ -15,7 +15,7 @@ Week 2: Get the color to display
 
 week 3: Get the solvers working
 
-Week 4: Get the Matrix correct
+Week 4: Implement jQuery and Sizzle 
 
 Week 5: Finalize and stretch goal: user FULL control of the scene
 
